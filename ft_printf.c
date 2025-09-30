@@ -6,7 +6,7 @@
 /*   By: sreffers <sreffers@student.42madrid.c>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 22:44:56 by sreffers          #+#    #+#             */
-/*   Updated: 2025/09/30 17:34:50 by sreffers         ###   ########.fr       */
+/*   Updated: 2025/09/30 17:57:30 by sreffers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_printf(const char *str, ...)
 {
 	va_list	args;
 	int		i;
-	int	count;
+	int		count;
 
 	va_start(args, str);
 	count = 0;
@@ -61,7 +61,7 @@ int	ft_printf(const char *str, ...)
 		i++;
 	}
 	va_end(args);
-	return count;
+	return (count);
 }
 
 /*#include <stdio.h>
