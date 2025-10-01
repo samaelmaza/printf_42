@@ -6,11 +6,11 @@
 /*   By: sreffers <sreffers@student.42madrid.c>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 15:08:40 by sreffers          #+#    #+#             */
-/*   Updated: 2025/09/30 17:28:20 by sreffers         ###   ########.fr       */
+/*   Updated: 2025/10/01 23:56:09 by sreffers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	is_specifier(char c)
 {
@@ -33,7 +33,7 @@ void	ft_putstr_fd(char *s, int fd, int *count)
 	int	i;
 
 	if (!s)
-		return ;
+		s = "(null)";
 	i = 0;
 	while (s[i])
 	{

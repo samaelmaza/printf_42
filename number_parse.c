@@ -6,11 +6,11 @@
 /*   By: sreffers <sreffers@student.42madrid.c>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 15:09:36 by sreffers          #+#    #+#             */
-/*   Updated: 2025/09/30 17:22:04 by sreffers         ###   ########.fr       */
+/*   Updated: 2025/10/02 00:08:18 by sreffers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_putnbr_fd(int n, int fd, int *count)
 {
@@ -63,11 +63,9 @@ void	ft_putnbr_base(unsigned int nbr, char *base, int *count)
 void	ft_putnbr_base_long(unsigned long nbr, char *base, int *count)
 {
 	int		size;
-	long	n;
 
-	n = nbr;
 	size = ft_strlen(base);
-	if (n >= size)
-		ft_putnbr_base(n / size, base, count);
-	ft_putchar_fd(base[n % size], 1, count);
+	if (nbr >= (unsigned long)size)
+		ft_putnbr_base_long(nbr / size, base, count);
+	ft_putchar_fd(base[nbr % size], 1, count);
 }
